@@ -8,7 +8,7 @@ printf "|\t%10s\t|\t%s\t|\t%s\t|\n" "program name" "Mem (%) :: Size" "CPU (%)"
 printf "+-----------------------+-----------------------+---------------+\n"
 
 for P in $PROG; do
-	top -b -n1 |tail -n+7|awk --re-interval 'BEGIN{
+	top -b -n1 |tail -n+7|gawk --re-interval 'BEGIN{
 							SIZE=0
 							CPU=0
 						}
